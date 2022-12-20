@@ -1,1 +1,11 @@
-<p>file-upload-component works!</p>
+<h1>Simple File Upload</h1>
+<ng-container *ngIf="fileToUpload$ | async as item"><img [src]="item" class="image-preview"></ng-container>
+
+<form [formGroup]="fileUploadFormGroup" (submit)="onUploadSubmit()">
+  <div>
+    <input type="file" formControlName="url" required (change)="onFileChanged($event)">
+  </div>
+  <div>
+    <button type="submit" mat-raised-button color="primary" style="margin-top: 20px">Submit</button>
+  </div>
+</form>

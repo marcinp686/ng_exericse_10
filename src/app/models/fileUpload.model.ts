@@ -1,4 +1,4 @@
-﻿export interface FileUploadModel {
+﻿export interface FileModel {
   FileId: string;
   FileName: string;
   FileExt: string;
